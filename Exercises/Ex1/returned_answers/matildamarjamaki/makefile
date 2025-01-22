@@ -7,6 +7,8 @@ all: $(MAIN).pdf
 $(MAIN).pdf: $(MAIN).tex
 	pdflatex $(MAIN).tex
 	bibtex $(MAIN)
+	mpost feyngraph1.mp
+	mpost feyngraph2.mp
 	pdflatex $(MAIN).tex
 	pdflatex $(MAIN).tex
 
