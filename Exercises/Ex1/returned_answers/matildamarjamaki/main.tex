@@ -1,0 +1,72 @@
+\documentclass[a4paper,11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption} % For arranging images side-by-side
+\usepackage{feynmp}
+\usepackage{tikz}
+\usepackage{tikz-feynman} % For TikZ-based Feynman diagrams
+\bibliographystyle{unsrt} % Reference style
+
+% Enable Metapost processing
+\DeclareGraphicsRule{*}{mps}{*}{}
+
+\begin{document}
+
+\title{Electron-Positron Annihilation: Lowest Order Contributions}
+
+\section{Feynman Diagrams}
+\begin{figure}[h!]
+    \centering
+    % First diagram
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \begin{fmffile}{feyngraph2}
+            \begin{fmfgraph*}(110,60)
+                \fmfright{i1,i2}
+                \fmfleft{o1,o2}
+                \fmflabel{$\gamma$}{i1}
+                \fmflabel{$\gamma$}{i2}
+                \fmflabel{$e^-$}{o1}
+                \fmflabel{$e^+$}{o2}
+                \fmf{boson}{i1,v1}
+                \fmf{fermion,tension=1.5}{v1,o1} % Shortened outgoing fermion
+                \fmf{boson,tension=1.5}{v2,i2} % Shortened incoming fermion
+                \fmf{fermion}{v2,o2}
+                \fmf{fermion,tension=0.8}{v1,v2} % Lengthened photon line
+            \end{fmfgraph*}
+        \end{fmffile}
+    \end{subfigure}
+    \hfill % Spacing between subfigures
+    % Second diagram
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \begin{fmffile}{feyngraph1}
+            \begin{fmfgraph*}(110,60)
+                \fmfleft{i1,i2}
+                \fmfright{o1,o2}
+                \fmflabel{$e^-$}{i1}
+                \fmflabel{$e^+$}{i2}
+                \fmflabel{$\gamma$}{o1}
+                \fmflabel{$\gamma$}{o2}
+                \fmf{fermion}{i1,v1}
+                \fmf{boson,tension=1.5}{v1,o1} % Shortened outgoing fermion
+                \fmf{fermion,tension=1.5}{v2,i2} % Shortened incoming fermion
+                \fmf{boson}{v2,o2}
+                \fmf{fermion,tension=0.8}{v1,v2} % Lengthened photon line
+            \end{fmfgraph*}
+        \end{fmffile}
+    \end{subfigure}
+    \vspace{2em}
+    \caption{Feynman graphs for the lowest order contributions to electron-positron annihilation \cite{peskin1995}.}
+\end{figure}
+
+\bibliography{references} % Reference to your .bib file
+
+\end{document}
+
+
+
+
+
