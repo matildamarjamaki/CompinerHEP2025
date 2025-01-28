@@ -1,19 +1,22 @@
 
 # Python job script (jobs.py)
-import os
 import subprocess
-from multiprocessing import Pool
+import os
 
-def run_job(i):
-    output_dir = "outputs"
-    os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, f"output_{i}.txt")
-    with open(output_file, "w") as f:
-        subprocess.run(["./hello", str(i)], stdout=f)
+# Create the 'outputs' directory if it doesn't exist
+if not os.path.exists('outputs'):
+    os.makedirs('outputs')
 
-if __name__ == "__main__":
-    n = 10
-    with Pool(n) as pool:
-        pool.map(run_job, range(1, n + 1))
+# Run 10 jobs in parallel with different input numbers
+processes = []
+for i in range(1, 11):
+    # Save output to the 'outputs' directory
+    with open(f"outputs/output_{i}.txt", "w") as outfile:
+        print(f"Starting job {i}...")
+        processes.append(subprocess.Popen(["./hello", str(i)], stdout=outfile))
 
-    print("All jobs completed. Outputs are in the 'outputs' directory.")
+# Wait for all jobs to finish
+for p in processes:
+    p.wait()
+
+print("All jobs completed. Outputs are in the 'outputs' directory.")
