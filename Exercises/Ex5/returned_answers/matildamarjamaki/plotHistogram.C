@@ -1,53 +1,57 @@
 
-#include <TFile.h>
-#include <TTree.h>
-#include <TH1D.h>
-#include <TCanvas.h>
-#include <TF1.h>
-#include <iostream>
+#include <TFile.h> // mahdollistaa ROOT-tiedostojen käsittelyä (.root)
+#include <TTree.h> // antaa työkaluja ROOT:n TTree-tietorakenteen käsittelyyn
+#include <TH1D.h> // ROOT:n histogrammiobjekti (käytetään yhden muuttujan histogrammien käsittelyyn)
+#include <TCanvas.h> // "piirtoalusta"
+#include <TF1.h> // ROOT:n funktionsovitus
+#include <iostream> // tulostusten ja virheilmoitusten käsittelyyn
 
 void plotHistogram() {
-    // Open the ROOT file
+    // avataan tallennettua dataa sisältävä ROOT-tiedosto
     TFile *file = new TFile("random_numbers.root", "READ");
+    // tarkistetaan onnistuiko avaaminen
     if (!file || file->IsZombie()) {
         std::cerr << "Error: Cannot open file random_numbers.root" << std::endl;
         return;
     }
-    
-    // Retrieve the tree
+
+    // haetaan TTree-olio tiedostosta
     TTree *tree;
     file->GetObject("tree", tree);
+    // tarkistetaan löytyikö TTree-olio
     if (!tree) {
         std::cerr << "Error: Cannot find TTree in file" << std::endl;
         return;
     }
     
-    // Define a histogram
+    // luodaan histogrammi 50 binillä välille [-4,4]
     TH1D *hist = new TH1D("hist", "Histogram of Random Numbers;Value;Frequency", 50, -4, 4);
     
-    // Fill the histogram from the tree
+    // hakee tietoja TTree:sta ja tallentaa ne histogrammiin
     tree->Draw("random_number >> hist");
     
-    // Customize histogram appearance
-    hist->SetLineColor(kBlack);
-    hist->SetLineWidth(3);
-    hist->SetFillColor(kYellow);
+    // histogrammin ulkoasu
+    hist->SetLineColor(kBlack); // musta viiva
+    hist->SetLineWidth(3); // viivan leveys
+    hist->SetFillColor(kYellow); // keltainen täyttöväri
     
-    // Create a canvas
+    // luodaan "piirtoalusta" histogrammille
     TCanvas *canvas = new TCanvas("canvas", "Histogram", 800, 600);
-    canvas->SetFillColor(kWhite);
+    canvas->SetFillColor(kWhite); // valkoinen taustaväri
     
-    // Draw the histogram
+    // lopullinen printti histogrammille
     hist->Draw();
     
-    // Fit the histogram with a Gaussian
+    // luodaan Gaussin jakauma, joka sovitetaan histogrammiin välille [-4,4]
     TF1 *fitFunc = new TF1("fitFunc", "gaus", -4, 4);
+
+    // sovitetaan funktio histogrammiin
     hist->Fit(fitFunc, "R");
     
-    // Save the plot as an image
+    // tallennetaan kuva histogrammista tiedostoksi
     canvas->SaveAs("histogram.png");
     
-    // Cleanup
+    // suljetaan tiedosto ja vapautetaan muisti
     file->Close();
     delete file;
 }

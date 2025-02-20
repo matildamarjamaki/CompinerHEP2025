@@ -1,72 +1,42 @@
 
-// #include <TFile.h>
-// #include <TTree.h>
-// #include <TRandom3.h>
-// #include <iostream>
-
-// void generateTree() {
-//     // Create a ROOT file to store the tree
-//     TFile *file = new TFile("random_numbers.root", "RECREATE");
-    
-//     // Create a TTree
-//     TTree *tree = new TTree("tree", "Tree with normally distributed random numbers");
-    
-//     // Variable to hold generated numbers
-//     double value;
-    
-//     // Create a branch in the tree
-//     tree->Branch("value", &value, "value/D");
-    
-//     // Random number generator
-//     TRandom3 randGen(0); // Seed = 0 (can be changed)
-    
-//     // Generate N = 1000 normally distributed random numbers (mean=0, sigma=1)
-//     const int N = 1000;
-//     for (int i = 0; i < N; ++i) {
-//         value = randGen.Gaus(0, 1);
-//         tree->Fill();
-//     }
-    
-//     // Write tree to file
-//     tree->Write();
-//     file->Close();
-    
-//     std::cout << "Generated " << N << " normally distributed numbers and saved to random_numbers.root" << std::endl;
-// }
-
-#include <TTree.h>
-#include <TRandom3.h>
-#include <TFile.h>
+#include <TTree.h> // antaa työkaluja ROOT:n TTree-tietorakenteen käsittelyyn
+#include <TRandom3.h> // ROOT:n satunnaislukugeneraattori
+#include <TFile.h> // mahdollistaa ROOT-tiedostojen käsittelyä (.root)
 
 void generateTree() {
-    // Number of random numbers to generate
-    const int N = 1000;
+    const int N = 1000; // määrittää, kuinka monta satunnaislukua halutaan generoida (nyt 1000)
 
-    // Create a ROOT file to save the tree
+    // luodaan ROOT-tiedosto, johon tietorakenne tallennetaan
+    // RECREATE --> tiedosto luodaan uudelleen, jos se on jo olemassa
     TFile *file = new TFile("random_numbers.root", "RECREATE");
 
-    // Create a TTree with a single branch to hold the random numbers
+    // luodaan ROOT-tietorakenne/TTree, johon tallennetaan satunnaisluvut
     TTree *tree = new TTree("tree", "Tree of Random Numbers");
 
-    // Variable to hold each random number
+    // muuttuja satunnaiselle luvulle
     double random_number;
 
-    // Create a branch to store the random numbers in the tree
+    // lisätään branch tietorakenteeseen, jossa tallennetaan satunnaisnumero
+    // branch = "random_number"
+    // viite muuttujaan, johon data tallennetaan on &random_number
     tree->Branch("random_number", &random_number);
 
-    // Create a random number generator
+    // satunnaislukugeneraattorin luonti (TRandom3)
+    // (käyttää Mersenne Twister -algoritmia satunnaislukujen tuottamiseen)
     TRandom3 randGen;
 
-    // Fill the tree with N normally distributed random numbers
+    // loop, joka käy läpi N satunnaislukua ja täyttää ne tietorakenteeseen
     for (int i = 0; i < N; ++i) {
-        random_number = randGen.Gaus(0, 1);  // Generate a normal random number with mean 0 and standard deviation 1
+        // tuottaa normaalijakautuneen satunnaisluvun (keskiarvo 0, hajonta 1)
+        random_number = randGen.Gaus(0, 1);
+        // täytetään tietorakenne uudella satunnaisluvulla
         tree->Fill();
     }
 
-    // Write the tree to the ROOT file
+    // vie tietorakenteen sisällön tiedostoon
     tree->Write();
 
-    // Close the file
+    // tiedoston sulkeminen, jotta tiedot tallentuvat ja tiedosto voidaan avata myöhemmin uudelleen
     file->Close();
 }
 
