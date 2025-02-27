@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "plotHistogram.C": "cpp",
+        "generateTree.C": "cpp"
+    }
+}
