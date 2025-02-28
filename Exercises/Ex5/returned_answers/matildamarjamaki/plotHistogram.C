@@ -9,7 +9,7 @@
 void plotHistogram() {
     // avataan tallennettua dataa sisältävä ROOT-tiedosto
     TFile *file = new TFile("random_numbers.root", "READ");
-    // tarkistetaan onnistuiko avaaminen
+    // tarkistetaan onniAstuiko avaaminen
     if (!file || file->IsZombie()) {
         std::cerr << "Error: Cannot open file random_numbers.root" << std::endl;
         return;
@@ -56,7 +56,7 @@ void plotHistogram() {
     delete file;
 }
 
-int main() {
-    plotHistogram();
-    return 0;
-}
+// int main() {
+//     plotHistogram();
+//     return 0;
+// }

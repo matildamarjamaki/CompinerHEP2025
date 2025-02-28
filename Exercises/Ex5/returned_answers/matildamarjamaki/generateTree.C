@@ -40,7 +40,7 @@ void generateTree() {
     file->Close();
 }
 
-int main() {
-    generateTree();
-    return 0;
-}
+// int main() {
+//     generateTree();
+//     return 0;
+// }
