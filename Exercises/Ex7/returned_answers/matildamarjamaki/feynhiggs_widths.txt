@@ -1,0 +1,11 @@
+---------- DECAY WIDTHS AND BRANCHING RATIOS -----------
+| GammaTot-h0           =    9.750267E-03
+| GammaTot-HH           =    0.460182    
+| GammaTot-A0           =    0.745007    
+| GammaTot-Hp           =    8.911659E-02
+| GammaTot-SMh0         =    2.786641E-03
+| GammaTot-SMHH         =    0.790450    
+| GammaTot-SMA0         =    0.721653    
+%
+%  Channel                  Gamma          BR             GammaSM        BRSM
+%| h0-gamma-gamma       =    6.553692E-06   6.721552E-04   5.861226E-06   2.103330E-03
