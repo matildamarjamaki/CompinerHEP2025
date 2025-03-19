@@ -1,0 +1,80 @@
+
+Tehtävä 1:
+
+HDECAY -ohjelman avulla on saatu dataa, jota on muokattu Higgsin bosonille sopivaksi.
+massa --> 125.0
+laskettujen leveyksien määrä --> 10
+Muokattu data on hdecay.in tiedostossa.
+
+Tiedostoon br.sm2 on nyt poimittu olennainen data, jota käytetään tehtävässä.
+Tämä data sisältää siis HDECAY -ohjelman laskemalle kymmenelle massalle välillä 110.0-130.0 lasketut leveydet.
+
+Run plot HDECAY widths using komento;
+
+root -l plot_hdecay_width.cxx
+
+Näin saat kuvaajan, joka esittää HDECAY -ohjelman laskemat leveydet Higgsin bosonille eri massoilla.
+
+Tehtävä 2:
+
+Aja ohjelma seuraavasti;
+1. Aja ensin ohjelma komennolla 
+   make && ./feynhiggs_widths >& outputFile
+   Tämä tuottaa outputFile nimisen tiedoston, joka on laskenut FeynHiggs -ohjelman määrittämät leveydet samoilla massoilla kuin hdecay tapauksessa.
+   
+2. Nyt käyttäen komentoa
+   root -l plot_widths_comparison.cxx
+   voidaan luoda ROOT:lla kuvaaja keräämällä data br.sm2 ja outputFile tiedostoista.
+   Koodi luo pädin, jossa ylempänä on kuvaaja, jossa esitetään sekä feynhiggs että hdecay massa - leveys käyrät.
+   Alempana on kuvaaja, joka vertailee näiden kahden ohjelman tuloksia (ratio of HDECAY width and FeynHiggs width)
+
+
+
+Exercise 1: Higgs Boson Width Calculation with HDECAY
+
+Overview
+In this exercise, data has been obtained using the HDECAY program
+and modified for compatibility with the Higgs boson analysis.
+
+Higgs boson mass: 125.0 GeV
+Number of calculated widths: 10
+
+The modified data is stored in the file hdecay.in.
+
+Data Extraction
+The essential results have been extracted into the file br.sm2.
+This file contains the calculated widths for the Higgs boson at ten different
+mass values in the range 110.0–130.0 GeV, based on the HDECAY program´s output.
+
+Plotting the Results
+To visualize the calculated widths,
+run the following command in the terminal:
+
+root -l plot_hdecay_width.cxx
+
+This will generate a plot showing the Higgs boson
+widths computed by HDECAY for different mass values.
+
+Exercise 2: Comparing Higgs Boson Widths with FeynHiggs and HDECAY
+
+Running the FeynHiggs Calculation
+Execute the following command to run the FeynHiggs program:
+
+make && ./feynhiggs_widths >& outputFile
+
+This will generate a file named outputFile,
+containing the Higgs boson width calculations performed by FeynHiggs.
+The calculations use the same mass values as in the HDECAY case.
+
+Plotting the Comparison
+To visualize and compare the results, run the following command:
+
+root -l plot_widths_comparison.cxx
+
+This script collects data from br.sm2 (HDECAY output)
+and outputFile (FeynHiggs output).
+The generated plot consists of two subplots:
+The top plot shows the Higgs boson width as a function
+of mass for both FeynHiggs and HDECAY.
+The bottom plot displays the ratio of the HDECAY width to the FeynHiggs width,
+allowing for a direct comparison of the results from both programs.
