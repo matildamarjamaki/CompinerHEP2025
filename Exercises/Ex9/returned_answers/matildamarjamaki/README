@@ -1,0 +1,7 @@
+
+Run with following steps;
+
+make all
+/bin/tcsh events.job
+python3 analyze_muon_distributions.py
+./detect_muons
