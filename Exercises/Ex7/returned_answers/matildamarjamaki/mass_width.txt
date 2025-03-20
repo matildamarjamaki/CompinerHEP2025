@@ -1,2 +1,0 @@
-# Higgs Mass (GeV)   Width (GeV)
-120.000 0.3514E-02
