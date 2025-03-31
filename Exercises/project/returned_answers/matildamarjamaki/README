@@ -1,0 +1,6 @@
+
+Run with following steps;
+
+make all
+make test
+/bin/tcsh test.job
