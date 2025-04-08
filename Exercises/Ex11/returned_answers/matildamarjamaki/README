@@ -1,0 +1,7 @@
+
+How to run;
+
+root
+TFile *f = TFile::Open("DYJetsToLL.root");
+TTree *t = (TTree*)f->Get("Events");
+t->Process("DYSelector.cxx");
