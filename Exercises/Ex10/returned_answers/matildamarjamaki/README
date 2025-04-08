@@ -4,6 +4,8 @@ How to run;
 make
 ./exampleB4a
 
+-------------------------------------------------------------
+
 Type of particle detector is being simulated (what materials, approximate geometry);
 
 The GEANT4 example basic/B4/B4a simulates a sampling calorimeter, which is a type of particle detector designed to measure the energy of incoming particles.
@@ -19,3 +21,27 @@ In its default configuration, the detector consists of:
 - The geometry includes multiple repeated units (layers) of these materials, arranged in a compact, rectangular geometry typical for calorimeters.
 
 In this simulation, the absorber material was also changed to water to observe how the energy deposition and shower profiles change depending on the absorber material.
+
+-------------------------------------------------------------
+
+Instructions:
+
+In this task, you will modify the vis.mac file to change the particle type (electron, proton, or alpha particle). In the same file, define the interaction of a 10 GeV particle.
+
+Additionally, in the DetectorConstruction.cc file, change the absorber material from lead (Pb) to water. This is done using the NIST Manager, which allows Geant4 to automatically recognize the material by its name (e.g., "G4_WATER").
+
+-------------------------------------------------------------
+
+Produced pictures:
+
+Absorber: Pb
+
+g4_0000.eps (electron)
+g4_0001.eps (proton)
+g4_0002.eps (alpha particle)
+
+Absorber: Water
+
+g4_0003.eps (electron)
+g4_0004.eps (proton)
+g4_0005.eps (alpha particle)
