@@ -1,0 +1,40 @@
+/run/verbose 2
+/run/initialize
+/control/execute vis.mac
+/vis/open DAWNFILE
+/vis/sceneHandler/create DAWNFILE
+/vis/viewer/create ! ! 600x600-0+0
+/vis/viewer/set/autoRefresh false
+/vis/verbose errors
+/vis/drawVolume
+/vis/scene/create
+/vis/scene/add/volume world -1 -1 none m 0 0 0 0 0 0
+/vis/sceneHandler/attach
+/vis/viewer/set/viewpointThetaPhi 90. 180.
+/vis/scene/add/trajectories smooth
+/tracking/storeTrajectory 2
+/vis/scene/notifyHandlers
+/vis/modeling/trajectories/create/drawByCharge
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/scene/notifyHandlers scene-0
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 1
+/vis/scene/notifyHandlers scene-0
+/vis/scene/add/hits
+/vis/scene/notifyHandlers
+/vis/scene/endOfEventAction accumulate
+/vis/viewer/set/autoRefresh true
+/vis/verbose warnings
+/run/verbose 1
+/event/verbose 1
+/tracking/verbose 1
+/gun/particle e-
+/gun/energy 10 GeV
+/vis/modeling/trajectories/list
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/select drawByParticleID-0
+/vis/modeling/trajectories/drawByParticleID-0/set gamma red
+/vis/scene/notifyHandlers scene-0
+/run/beamOn 1
+/vis/scene/notifyHandlers scene-0
+/analysis/h1/getVector
+/analysis/h2/getVector

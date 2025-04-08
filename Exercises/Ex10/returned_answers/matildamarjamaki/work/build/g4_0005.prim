@@ -1,0 +1,226 @@
+##G4.PRIM-FORMAT-2.4
+/BoundingBox       -103.077641       -103.077641       -103.077641        103.077641        103.077641        103.077641
+!SetCamera
+!OpenDevice
+!BeginModeling
+#--------------------
+#/PVName          Calorimeter:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0                 0
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50                75
+#--------------------
+#/PVName               Layer:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0             -67.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               7.5
+#--------------------
+#/PVName                    Abso:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0               -70
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50                 5
+#--------------------
+#/PVName                    Gap:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0             -62.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               2.5
+#--------------------
+#/PVName               Layer:1
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0             -52.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               7.5
+#--------------------
+#/PVName                    Abso:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0               -55
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50                 5
+#--------------------
+#/PVName                    Gap:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0             -47.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               2.5
+#--------------------
+#/PVName               Layer:2
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0             -37.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               7.5
+#--------------------
+#/PVName                    Abso:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0               -40
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50                 5
+#--------------------
+#/PVName                    Gap:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0             -32.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               2.5
+#--------------------
+#/PVName               Layer:3
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0             -22.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               7.5
+#--------------------
+#/PVName                    Abso:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0               -25
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50                 5
+#--------------------
+#/PVName                    Gap:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0             -17.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               2.5
+#--------------------
+#/PVName               Layer:4
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0              -7.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               7.5
+#--------------------
+#/PVName                    Abso:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0               -10
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50                 5
+#--------------------
+#/PVName                    Gap:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0              -2.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               2.5
+#--------------------
+#/PVName               Layer:5
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0               7.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               7.5
+#--------------------
+#/PVName                    Abso:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0                 5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50                 5
+#--------------------
+#/PVName                    Gap:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0              12.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               2.5
+#--------------------
+#/PVName               Layer:6
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0              22.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               7.5
+#--------------------
+#/PVName                    Abso:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0                20
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50                 5
+#--------------------
+#/PVName                    Gap:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0              27.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               2.5
+#--------------------
+#/PVName               Layer:7
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0              37.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               7.5
+#--------------------
+#/PVName                    Abso:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0                35
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50                 5
+#--------------------
+#/PVName                    Gap:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0              42.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               2.5
+#--------------------
+#/PVName               Layer:8
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0              52.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               7.5
+#--------------------
+#/PVName                    Abso:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0                50
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50                 5
+#--------------------
+#/PVName                    Gap:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0              57.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               2.5
+#--------------------
+#/PVName               Layer:9
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0              67.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               7.5
+#--------------------
+#/PVName                    Abso:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0                65
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50                 5
+#--------------------
+#/PVName                    Gap:0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0              72.5
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box                50                50               2.5
+#--------------------
+!EndModeling
+!DrawAll
+!CloseDevice

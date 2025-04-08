@@ -1,0 +1,21 @@
+
+How to run;
+
+make
+./exampleB4a
+
+Type of particle detector is being simulated (what materials, approximate geometry);
+
+The GEANT4 example basic/B4/B4a simulates a sampling calorimeter, which is a type of particle detector designed to measure the energy of incoming particles.
+
+In its default configuration, the detector consists of:
+
+- Alternating layers of scintillator and absorber material, forming a layered sandwich-like structure.
+
+- The scintillator layers (usually plastic or inorganic crystal-based) act as the active material that detects energy deposited by the particle showers.
+
+- The absorber layers are made of lead (Pb) by default, and their role is to induce electromagnetic or hadronic showers by slowing down or stopping the incoming particles.
+
+- The geometry includes multiple repeated units (layers) of these materials, arranged in a compact, rectangular geometry typical for calorimeters.
+
+In this simulation, the absorber material was also changed to water to observe how the energy deposition and shower profiles change depending on the absorber material.
