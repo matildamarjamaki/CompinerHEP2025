@@ -1,0 +1,6 @@
+
+#!/usr/bin/sh
+
+singularity run -i -B ${PWD}:/work coffea.sif bash -c /work/job.sh
+chmod 777 output.root
+echo Job finished
