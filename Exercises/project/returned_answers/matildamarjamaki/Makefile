@@ -77,7 +77,7 @@ run: all
 
 # Clean only generated files
 clean:
-	rm -f *~ *.exe *.png signal.out background.out
+	rm -f *.exe *.png signal.out background.out
 
 # Clean everything including Pythia
 cleanAll:

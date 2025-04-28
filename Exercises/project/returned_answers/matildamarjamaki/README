@@ -4,3 +4,15 @@ Run with following steps;
 make all
 make test
 /bin/tcsh test.job
+
+make run <-- tällä hetkellä tämä
+
+We simulate 1,000,000 events for both signal and background 
+samples to ensure a statistically meaningful analysis after 
+applying strict kinematic cuts and isolation criteria. 
+For rare processes and to estimate the shape of the invariant 
+mass distribution reliably in both signal and background, 
+at least 10⁵ – 10⁶ events are often needed. This also allows 
+us to determine the trigger efficiency with reasonable 
+precision.
+
